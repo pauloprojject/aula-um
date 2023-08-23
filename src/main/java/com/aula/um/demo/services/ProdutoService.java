@@ -1,6 +1,5 @@
 package com.aula.um.demo.services;
 
-import java.util.Comparator;
 import java.util.List;
 
 import com.aula.um.demo.entidades.Produto;
