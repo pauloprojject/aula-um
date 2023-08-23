@@ -2,7 +2,7 @@ package com.aula.um.demo.entidades;
 
 import java.util.function.Predicate;
 
-public class Produto implements Predicate{
+public class Produto implements Predicate<Produto>{
     private Integer id;
     private String nome;
     private Double preco;
@@ -41,8 +41,8 @@ public class Produto implements Predicate{
     }
 
     @Override
-    public boolean test(Object arg0) {
-        return t.getPreco() > 200;
+    public boolean test(Produto t) {
+        return t.getPreco() >= 200;
     }
 
     
