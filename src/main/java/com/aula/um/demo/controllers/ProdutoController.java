@@ -22,4 +22,19 @@ public class ProdutoController {
     public List<Produto> findAllProduto(){
         return service.findAllProduto();
     }
+
+    @GetMapping("/predicate")
+    public List<Produto> findAllPredicate(){
+        return service.findAllPredicate();
+    }
+
+    @GetMapping("/consumer")
+    public List<Produto> findAllConsumer(){
+        return service.findAllConsumer();
+    }
+
+    @GetMapping("/function")
+    public List<Produto> findAllFunction(){
+        return service.findAllFunction();
+    }
 }

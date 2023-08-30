@@ -15,8 +15,8 @@ public class ProdutoRepositorio {
         
         list.add(new Produto(1, "Notebook", 5000.00));
         list.add(new Produto(2, "Celular", 4500.00));
-        list.add(new Produto(3, "Mouse", 450.00));
-        list.add(new Produto(4, "Teclado", 500.00));
+        list.add(new Produto(3, "Mouse", 150.00));
+        list.add(new Produto(4, "Teclado", 100.00));
         list.add(new Produto(5, "Monitor", 1500.00));
 
         return list;

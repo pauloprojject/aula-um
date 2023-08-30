@@ -1,8 +1,8 @@
 package com.aula.um.demo.entidades;
 
-import java.util.function.Predicate;
+import java.util.function.Function;
 
-public class Produto implements Predicate<Produto>{
+public class Produto implements Function<Produto, Produto>{
     private Integer id;
     private String nome;
     private Double preco;
@@ -28,7 +28,7 @@ public class Produto implements Predicate<Produto>{
         return nome;
     }
 
-    public void setMome(String nome) {
+    public void setNome(String nome) {
         this.nome = nome;
     }
 
@@ -41,9 +41,10 @@ public class Produto implements Predicate<Produto>{
     }
 
     @Override
-    public boolean test(Produto t) {
-        return t.getPreco() >= 200;
-    }
+    public Produto apply(Produto p) {
+        p.setNome(p.getNome().toUpperCase());
 
+        return p;
+    }
     
 }
