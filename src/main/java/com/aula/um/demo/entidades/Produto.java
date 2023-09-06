@@ -2,7 +2,7 @@ package com.aula.um.demo.entidades;
 
 import java.util.function.Function;
 
-public class Produto implements Function<Produto, Produto>{
+public class Produto {
     private Integer id;
     private String nome;
     private Double preco;
@@ -10,7 +10,6 @@ public class Produto implements Function<Produto, Produto>{
     public Produto() {}
 
     public Produto(Integer id, String nome, Double preco) {
-        super();
         this.id = id;
         this.nome = nome;
         this.preco = preco;
@@ -38,13 +37,6 @@ public class Produto implements Function<Produto, Produto>{
 
     public void setPreco(Double preco) {
         this.preco = preco;
-    }
-
-    @Override
-    public Produto apply(Produto p) {
-        p.setNome(p.getNome().toUpperCase());
-
-        return p;
     }
     
 }
