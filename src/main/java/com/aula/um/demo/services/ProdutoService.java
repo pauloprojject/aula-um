@@ -56,7 +56,11 @@ public class ProdutoService {
     public List<Produto> findAllFunction(){
         List<Produto> list = repositorio.findAllProduto();
 
-        List<Produto> listUpper = list.stream().map(new Produto()).collect(Collectors.toList());
+        List<Produto> listUpper = list.stream().map((p) -> {
+            p.setNome(p.getNome().toUpperCase());
+            return p;
+        }).collect(Collectors.toList());
+        
 
         return listUpper;
     }
@@ -65,7 +69,9 @@ public class ProdutoService {
         List<Produto> list = repositorio.findAllProduto();
 
         ProdutoFunctionUtils func = new ProdutoFunctionUtils();
-        Double soma = func.SomaProdutos(list, p =>)
+        Double soma = func.SomaProdutos(list, p -> p.getPreco() > 0);
+
+        return soma;
         
     }
 
