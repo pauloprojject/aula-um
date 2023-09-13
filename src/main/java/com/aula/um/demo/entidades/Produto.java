@@ -1,5 +1,6 @@
 package com.aula.um.demo.entidades;
 
+import java.util.Objects;
 import java.util.function.Function;
 
 public class Produto {
@@ -38,5 +39,24 @@ public class Produto {
     public void setPreco(Double preco) {
         this.preco = preco;
     }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, nome, preco);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Produto other = (Produto) obj;
+        return (other.id.equals(id)) && (other.nome.equals(nome)) && (other.preco.equals(preco));
+    }
+
+    
     
 }

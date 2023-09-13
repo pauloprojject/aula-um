@@ -14,6 +14,7 @@ public class ProdutoRepositorio {
         List<Produto> list = new ArrayList<>();
         
         list.add(new Produto(1, "Notebook", 5000.00));
+        list.add(new Produto(1, "Notebook", 5000.00));
         list.add(new Produto(2, "Celular", 4500.00));
         list.add(new Produto(3, "Mouse", 150.00));
         list.add(new Produto(4, "Teclado", 100.00));
@@ -26,6 +27,7 @@ public class ProdutoRepositorio {
         
         List<Produto> list = new ArrayList<>();
         
+        list.add(new Produto(1, "Feijão", 8.00));
         list.add(new Produto(1, "Feijão", 8.00));
         list.add(new Produto(2, "Arroz", 5.00));
         list.add(new Produto(3, "Macarrão", 3.00));

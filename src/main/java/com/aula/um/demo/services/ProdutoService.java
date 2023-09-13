@@ -91,6 +91,7 @@ public class ProdutoService {
                                             .map((p) ->{p.setNome(p.getNome().toUpperCase()); return p;})
                                             .peek((p) -> p.setPreco(p.getPreco() + 100))
                                             .sorted(Comparator.comparing(Produto::getNome))
+                                            .distinct()
                                             .toList();
 
         return teste;
