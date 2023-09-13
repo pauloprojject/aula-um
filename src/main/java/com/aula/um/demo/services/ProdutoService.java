@@ -92,6 +92,8 @@ public class ProdutoService {
                                             .peek((p) -> p.setPreco(p.getPreco() + 100))
                                             .sorted(Comparator.comparing(Produto::getNome))
                                             .distinct()
+                                            // .skip(3)
+                                            // .limit(5)
                                             .toList();
 
         return teste;
