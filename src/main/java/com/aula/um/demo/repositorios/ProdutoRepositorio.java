@@ -21,4 +21,17 @@ public class ProdutoRepositorio {
 
         return list;
     }
+
+    public List<Produto> findAllProdutoNovo(){
+        
+        List<Produto> list = new ArrayList<>();
+        
+        list.add(new Produto(1, "Feijão", 8.00));
+        list.add(new Produto(2, "Arroz", 5.00));
+        list.add(new Produto(3, "Macarrão", 3.00));
+        list.add(new Produto(4, "Carne", 40.00));
+        list.add(new Produto(5, "Queijo", 25.00));
+
+        return list;
+    }
 }

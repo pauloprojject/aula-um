@@ -37,4 +37,9 @@ public class ProdutoController {
     public List<Produto> findAllFunction(){
         return service.findAllFunction();
     }
+
+    @GetMapping("/stream")
+    public List<Produto> findStream(){
+        return service.findStream();
+    }
 }
